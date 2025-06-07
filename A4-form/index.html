@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A4 Form</title>
+	<link rel="stylesheet" href="styles.css">
+    <style>
+        .form-container {
+            width: 110mm;
+            height: 297mm;
+            padding: 20mm;
+            border: 1px solid #000;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Personal Information Form</h1>
+        <form id="personalInfoForm">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="address">Address:</label>
+                <input type="text" id="address" name="address" required>
+            </div>
+            <div class="form-group">
+                <label for="contactNumber">Contact Number:</label>
+                <input type="tel" id="contactNumber" name="contactNumber" required>
+            </div>
+            <div class="form-group">
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" required>
+            </div>
+            <div class="form-group">
+                <label for="occupation">Occupation:</label>
+                <input type="text" id="occupation" name="occupation" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender" required>
+                    <option value="">Select</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="nationality">Nationality:</label>
+                <input type="text" id="nationality" name="nationality" required>
+            </div>
+            <div class="form-group">
+                <label for="emergencyContact">Emergency Contact:</label>
+                <input type="tel" id="emergencyContact" name="emergencyContact" required>
+            </div>
+            <div class="form-group">
+                <label for="maritalStatus">Marital Status:</label>
+                <select id="maritalStatus" name="maritalStatus" required>
+                    <option value="">Select</option>
+                    <option value="single">Single</option>
+                    <option value="married">Married</option>
+                    <option value="divorced">Divorced</option>
+                    <option value="widowed">Widowed</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="educationLevel">Education Level:</label>
+                <select id="educationLevel" name="educationLevel" required>
+                    <option value="">Select</option>
+                    <option value="highSchool">High School</option>
+                    <option value="bachelor">Bachelor's Degree</option>
+                    <option value="master">Master's Degree</option>
+                    <option value="phd">Ph.D.</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="signature">Signature:</label>
+                <input type="text" id="signature" name="signature" required>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('personalInfoForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Form submitted successfully!');
+            // Here you would typically send the form data to the server using AJAX
+        });
+    </script>
+</body>
+</html>
